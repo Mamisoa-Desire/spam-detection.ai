@@ -1,0 +1,38 @@
+.scanPage {
+    background-color: #020617; 
+    min-height: 100vh;
+    padding: 110px 0;
+    display: flex;
+    align-items: center;
+
+    .seuilWrapper {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rangeSlider {
+    width: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+    accent-color: #6366f1; 
+}
+
+.seuilLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+}
+
+
+@media (max-width: 991px) {
+    .divider { display: none; }
+    .leftPanel, .rightPanel { padding: 30px; }
+}

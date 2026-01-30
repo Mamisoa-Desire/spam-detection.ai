@@ -1,0 +1,130 @@
+/* Container de résultat */
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 400px;
+}
+
+.resultTitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* État Vide */
+.emptyState {
+    text-align: center;
+    color: #475569;
+}
+
+.emptyIcon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    opacity: 0.3;
+}
+
+/* Score et Barres */
+.scoreBox {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.percentage {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.progressBarContainer {
+    width: 100%;
+    height: 8px;
+    background: #1e293b;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    transition: width 1s ease-out;
+}
+
+.scoreLabel {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Carte de Verdict */
+.verdictCard {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.verdictIcon {
+    font-size: 2.5rem;
+}
+
+.verdictTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.verdictDesc {
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Couleurs dynamiques */
+.textSuccess { color: #10b981; }
+.bgSuccess { background: #10b981; }
+.verdictSuccess { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #10b981; }
+
+.textDanger { color: #f43f5e; }
+.bgDanger { background: #f43f5e; }
+.verdictDanger { background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.2); color: #f43f5e; }
+
+/* Tags */
+.tagsContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background: #1e293b;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Animation de chargement (Scan Line) */
+.loadingWrapper {
+    text-align: center;
+}
+
+.scanLine {
+    width: 100%;
+    height: 2px;
+    background: #6366f1;
+    box-shadow: 0 0 15px #6366f1;
+    position: relative;
+    animation: scanMove 2s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes scanMove {
+    0% { transform: translateY(-50px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(50px); opacity: 0; }
+}

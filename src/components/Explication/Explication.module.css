@@ -1,0 +1,113 @@
+.explicationPage {
+    background-color: #0f172a;
+    color: white;
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.mainTitle {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* Container du Flux */
+.flowContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flowItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.iconCircle {
+    width: 80px;
+    height: 80px;
+    background: #1e293b;
+    border: 2px solid #6366f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #6366f1;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.flowItem h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.flowContent p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    padding: 0 15px;
+}
+
+/* Connecteurs entre les cercles */
+.connector {
+    flex: 0.5;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    margin-top: 40px; /* Aligné au centre des cercles */
+    opacity: 0.4;
+}
+
+/* Animation de pulsation pour l'étape IA */
+.pulse {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    animation: pulseAnim 2s infinite;
+}
+
+@keyframes pulseAnim {
+    0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+/* Vidéo Section */
+.videoSection {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.videoFrame {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+/* Responsive pour Mobile */
+@media (max-width: 768px) {
+    .flowContainer {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .connector {
+        display: none; /* Cache les lignes horizontales sur mobile */
+    }
+    .iconCircle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
