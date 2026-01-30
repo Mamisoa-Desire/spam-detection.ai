@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Result.module.css';
 import { IoShieldCheckmarkOutline, IoAlertCircleOutline, IoStatsChartOutline } from 'react-icons/io5';
 
-export default function Result({ data, loading }) {
+export default function Result({ data, loading, seuil }) {
   if (loading) {
     return (
       <div className={s.resultContainer}>
@@ -61,7 +61,7 @@ export default function Result({ data, loading }) {
 
       <div className={s.tagsContainer}>
         <span className={s.tag}>Type: {data.type}</span>
-        <span className={s.tag}>Seuil utilisé: 0.75</span>
+        <span className={s.tag}>Seuil utilisé: {seuil}</span>
       </div>
     </div>
   );

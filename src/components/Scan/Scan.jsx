@@ -66,7 +66,7 @@ export default function Scan() {
           </div>
           <div className="col-lg-6">
             <div className={s.glassCard}>
-              <Result data={scanResult} loading={isLoading} />
+              <Result data={scanResult} loading={isLoading} seuil={seuil} />
             </div>
           </div>
         </div>
